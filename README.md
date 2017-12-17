@@ -1,1 +1,2 @@
-# Python_for_everyone
+# Python for everyone 2nd edition
+Exercises in _Python for everyone_
