@@ -1,0 +1,5 @@
+Amber; Dinner; 409.01; 2017-1-23
+Bob; Conference; 12400.70; 2017-9-6
+Clare; Lodging; 3221.34; 2018-1-1
+Doug; Vehicle; 490.99; 2017-11-17
+Eason; Dinner; 211.99; 2017-5-5
