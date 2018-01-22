@@ -1,25 +1,26 @@
 ##Ch06 P6.30
 
+def mergeSorted(aList, bList):
+    i = 0
+    j = 0
+    newList = []
+    while (i < len(aList) and j < len(bList)):
+
+        if (aList[i] <= bList[j]):
+            newList.append(aList[i])
+            i += 1
+        else:
+            newList.append(bList[j])
+            j += 1
+            
+        if j== len(bList):
+            newList.append(aList[-1])
+        if i== len(aList):
+            newList.append(bList[-1])
+
+    print(newList)
+
 list1 = [1,4,9,16]
 list2 = [4,7,9,9,11]
-newList = []
 
-index1 = 0
-index2 = 0
-
-while index1 < len(list1) and index2 < len(list2):
-
-    if list1[index1] <= list2[index2]:
-        newList.append(list1[index1])
-        index1 += 1
-    else:
-        newList.append(list2[index2])
-        index2 += 1
-
-if index1 < len(list1) :
-    newList.append(list1[-1])
-elif index2 < len(list2):
-    newList.append(list2[-1])
-
-
-print(newList)
+mergeSorted(list1, list2)
