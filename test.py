@@ -1,7 +1,10 @@
-dict1 = {(0,0):'a', (0,1):'b', (9,0): 'j', (1,1):'c', (1,9):'t', (2,1):'d', (3,4): 'f', (2,2):'e'}
-print(dict1)
-print(sorted(dict1))
-#print(dict1[(0,4)])
-
-dict2 = dict((2,4))
-print(dict2)
+from graphics import GraphicsWindow
+from sys import exit
+win = GraphicsWindow()
+canvas = win.canvas()
+x = int(input("Please enter the x coordinate: "))
+y = int(input("Please enter the y coordinate: "))
+if x < 0 or y < 0 :
+    exit("Error: x and y must be >= 0")
+canvas.drawOval(x - 5, y - 5, 10, 10)
+win.wait()
