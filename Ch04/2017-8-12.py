@@ -98,7 +98,7 @@ for i in range((x_upper - x_lower)*10):
 win.getMouse()
 
 ## P4.43
-from graphics import *
+from ezgraphics import *
 from math import *
 
 win = GraphWin('P4.43', 800,800)

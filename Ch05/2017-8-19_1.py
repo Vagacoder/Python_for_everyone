@@ -14,7 +14,7 @@ def main(string):
     print(isPalindrome(string))
 
 
-main('aibberia')
+main('aiebbeia')
 
 ## Ch05 P5.18
 
