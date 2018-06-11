@@ -1,5 +1,6 @@
 ## Ch05 R5.2h
 # calculate the weekday of date
+
 def weekDay(year, month, day):
 
     d = day
