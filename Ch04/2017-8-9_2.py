@@ -57,8 +57,8 @@ for i in range(len(string)-1, -1, -1):
     print(string[i], end='')
 
 ## Ch04 P4.11
-
-string = 'hairy'
+## This is not correct
+string = 'harry'
 
 count = 0
 for i in range(len(string)):

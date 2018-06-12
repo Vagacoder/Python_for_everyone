@@ -1,19 +1,21 @@
 ##Ch05 R5.14
 
 def subString_firstLetter(string):
-    if len(string) == 0: return
-#    n = len(string)
-#    print(n)
-    print(string)
-#    string = string[0:n-1]
-    string = subString_firstLetter(string[0:len(string)-1])
-    return
+    if len(string) == 0: 
+        return
+    else:
+        print(string)
+        string = subString_firstLetter(string[0:len(string)-1])
+
 
 
 def All_subString(string):
-    if len(string) == 0: return print('*')
-    subString_firstLetter(string)
-    All_subString(string[1:])
-    return
+    if len(string) == 0: 
+        print('*')
 
-All_subString('Mississipi')
+    else:
+        subString_firstLetter(string)
+        All_subString(string[1:])
+
+
+All_subString('Foxbat')
