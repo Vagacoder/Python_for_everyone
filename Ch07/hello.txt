@@ -1,4 +1,2 @@
-Hello World!
-writing test
-writing tEst2
-No hello (any) longer
+Hello, World!
+This is done using print command.
