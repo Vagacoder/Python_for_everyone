@@ -11,3 +11,5 @@ mainMenu.addOption("Help")
 mainMenu.addOption("Quit")
 choice = mainMenu.getInput()
 print("Input:", choice)
+
+print(3)
