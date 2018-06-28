@@ -6,6 +6,7 @@
 # global variable
 count = 0
 
+
 def main() :
     global count      # need global variable
     
@@ -15,7 +16,8 @@ def main() :
         f = fib(i)
         print("fib(%d) = %d" % (i, f))
 
-## Computes a Fibonacci number.
+
+#  #Computes a Fibonacci number.
 #  @param n an integer
 #  @return the nth Fibonacci number
 #
@@ -29,6 +31,7 @@ def fib(n) :
     else :
         print("fib() is called", count, "times")
         return fib(n - 1) + fib(n - 2)
-      
+
+
 # Start the program.
 main()

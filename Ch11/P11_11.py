@@ -10,9 +10,10 @@ def squareRoot(x):
     else:
         return "wrong input"
 
+
 # recursive help function    
 def squareRootGuess(x, g):
-    if abs(x - g**2) < 1E-14: # abs() is important!!!
+    if abs(x - g**2) < 1E-14:  # abs() is important!!!
         return g
     else:
         return squareRootGuess(x, (g + x/g)/2)
@@ -23,5 +24,5 @@ def main():
     print(squareRoot(0))
     print(squareRoot(16))
 
+
 main()
-      
