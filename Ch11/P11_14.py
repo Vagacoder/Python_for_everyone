@@ -1,6 +1,7 @@
 # # P11.14
 # Permutation using loop
 
+
 class PermutationIterator:
 
     def __init__(self, input1):
