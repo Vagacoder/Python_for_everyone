@@ -92,9 +92,9 @@ def permutations(word):
 
 # main method to execute
 def main():
-    # sp1 = SummationPuzzle("send + more = money")
+    sp1 = SummationPuzzle("send + more = money")
     # sp1 = SummationPuzzle("base + ball = games")
-    sp1 = SummationPuzzle("kyoto + osaka = tokyo")
+    # sp1 = SummationPuzzle("kyoto + osaka = tokyo")
     sp1.solv()
 
 

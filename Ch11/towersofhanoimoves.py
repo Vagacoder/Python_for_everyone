@@ -1,10 +1,6 @@
 ##
 #   This program prints instructions for solving a Towers of Hanoi puzzle.
 #
-
-def main() :
-   move(5, 1, 3)
-   
 ## Print instructions for moving a pile of disks from one peg to another.
 #  @param disks the number of disks to move
 #  @param fromPeg the peg from which to move the disks
@@ -16,6 +12,11 @@ def move(disks, fromPeg, toPeg) :
       move(disks - 1, fromPeg, other)
       print("Move disk from peg", fromPeg, "to", toPeg)
       move(disks - 1, other, toPeg)
+
       
+def main() :
+   move(3, 1, 3)
+   
+   
 # Start the program.
 main()
