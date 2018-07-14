@@ -4,12 +4,12 @@
 #
 
 from random import randint
-from mergesort import mergeSort
+from Ch12.mergesort import mergeSort
 
 n = 20
 values = []
-for i in range(n) :
-   values.append(randint(1, 100))   
+for i in range(n):
+    values.append(randint(1, 100))
 print(values)
 mergeSort(values)
 print(values)

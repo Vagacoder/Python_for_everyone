@@ -30,6 +30,7 @@ while smallN <= largeN:
     
 print("+--------+-------------+")    
 print("| number |     times   |")
+print("+--------+-------------+")
 for i in range(len(numbers)):
     print("|%6d  | %4.9f |" % (numbers[i], times[i]))
 

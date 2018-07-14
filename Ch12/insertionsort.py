@@ -5,15 +5,17 @@
 # Sorts a list, using insertion sort.
 # @param values the list to sort
 #
-def insertionSort(values) :
-   for i in range(1, len(values)) :
-      next = values[i]
 
-      # Move all larger elements up.
-      j = i
-      while j > 0 and values[j - 1] > next :
-         values[j] = values[j - 1]
-         j = j - 1
+
+def insertionSort(values):
+    for i in range(1, len(values)):
+        next = values[i]
+
+        # Move all larger elements up.
+        j = i
+        while j > 0 and values[j - 1] > next:
+            values[j] = values[j - 1]
+            j = j - 1
          
-      # Insert the element
-      values[j] = next
+        # Insert the element
+        values[j] = next

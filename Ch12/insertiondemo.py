@@ -3,12 +3,12 @@
 #
 
 from random import randint
-from insertionsort import insertionSort
+from Ch12.insertionsort import insertionSort
 
 n = 20
 values = []
-for i in range(n) :
-   values.append(randint(1, 100))   
+for i in range(n):
+    values.append(randint(1, 100))
 
 print(values)
 insertionSort(values)
