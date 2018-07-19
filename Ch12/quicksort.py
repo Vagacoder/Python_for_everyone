@@ -7,8 +7,16 @@
 #  @param start the first index of the portion to be sorted
 #  @param to the last index of the portion to be sorted
 #
+<<<<<<< HEAD
 def quickSort(values, start, to):
     if start >= to : return
+=======
+
+
+def quickSort(values, start, to):
+    if start >= to:
+        return
+>>>>>>> 4aa1e8914e722f1526d0938285b8c8d7c863ad43
     p = partition(values, start, to)
     quickSort(values, start, p)
     quickSort(values, p + 1, to)
@@ -19,6 +27,11 @@ def quickSort(values, start, to):
 #  @param to the last index of the portion to be partitioned
 #  @return the last index of the first partition
 #
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4aa1e8914e722f1526d0938285b8c8d7c863ad43
 def partition(values, start, to):
     pivot = values[start]
     i = start - 1
@@ -30,9 +43,18 @@ def partition(values, start, to):
         j = j - 1
         while values[j] > pivot:
             j = j - 1
+<<<<<<< HEAD
         if i < j :
             temp = values[i] # Swap the two elements
             values[i] = values[j]
             values[j] = temp
     return j
     
+=======
+        if i < j:
+            # Swap the two elements
+            temp = values[i]
+            values[i] = values[j]
+            values[j] = temp
+    return j
+>>>>>>> 4aa1e8914e722f1526d0938285b8c8d7c863ad43

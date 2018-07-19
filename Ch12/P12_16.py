@@ -8,7 +8,7 @@ def mergeSortNoRecursive(numbers):
     while size <= len(numbers):
         segmentNumber = len(numbers)/size
         for i in range(1, segmentNumber + 1):
-            
+            print(i)
         
         
         
