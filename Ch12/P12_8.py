@@ -15,8 +15,9 @@ def quickSort(values, start, to):
 # improved partition method
 
 def partition(values, start, to):
-    pIndex = med(values, start, to)
-    pivot = values[pIndex]
+    pivotIndex = med(values, start, to)
+    # (values[start], values[pivotIndex]) = (values[pivotIndex], values[start])
+    pivot = values[pivotIndex]
     i = start - 1
     j = to + 1
     while i < j:
@@ -37,37 +38,54 @@ def partition(values, start, to):
 # n <= 7, use middle element, n <= 40 use median of first, middle and last
 # element, otherwise use "psudomedian"
 def med(values, start, to):
-    n = len(values)
-    if to - start <=7:
-        return (to - start)//2
+    middle = (to + start)//2
+    if to - start <= 7:
+        return middle
     elif to - start <= 40:
-        newList = sorted([values[start], values[(to - start)//2], values[to-1]])
-        return newList[2]
+        return findMedFrom3(values, start, middle, to)
     else:
-        list1 = []
-        list2 = []
-        list3 = []
-        for i in range(3):
-            list1.append(values[i*n//8])
-        for i in range(3, 6):
-            list2.append(values[i*n//8])
-        for i in range(6, 9):
-            list3.append(values[i*n//8])
-        sorted(list1)
-        sorted(list2)
-        sorted(list3)
-        return sorted([list1[1], list2[1], list3[1]])[1]
+        return findMedFrom8(values, start, to)
+
+
+def findMedFrom8(values, start, to):
+    n = to-start+1
+    indexList = []
+    for i in range(9):
+        indexList.append(start + i*(n-1)//8)
+
+    index1 = findMedFrom3(values, indexList[0], indexList[1], indexList[2])
+    index2 = findMedFrom3(values, indexList[3], indexList[4], indexList[5])
+    index3 = findMedFrom3(values, indexList[6], indexList[7], indexList[8])
+
+    return findMedFrom3(values, index1, index2, index3)
+
+
+def findMedFrom3(values, i1, i2, i3):
+    if values[i1] < values[i2]:
+        if values[i2] < values[i3]:
+            return i2
+        elif values[i3] < values[i1]:
+            return i1
+        else:
+            return i3
+    else:  # values[i2] < values[i1]
+        if values[i1] < values[i3]:
+            return i1
+        elif values[i3] < values[i2]:
+            return i2
+        else:
+            return i3
                       
                       
 def main():
-    n = 20
+    n = 10000
     values = []
-    for i in range(n) :
+    for i in range(n):
         values.append(randint(1, 100))   
     print(values)    
-    quickSort(values, 0, 20)
+    quickSort(values, 0, n-1)
     print(values)
     
     
-main()
-                      
+# main()
+

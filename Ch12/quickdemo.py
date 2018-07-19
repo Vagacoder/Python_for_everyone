@@ -4,18 +4,29 @@
 #
 
 from random import randint
-from quicksort import quickSort
+import Ch12.quicksort
+import Ch12.P12_8
+from time import time
+# from Ch12.quicksort import quickSort
+# from Ch12.P12_8 import quickSort
 
-n = 20
+n = 50000
 values = []
-<<<<<<< HEAD
-for i in range(n) :
-   values.append(randint(1, 100))   
-=======
+
 for i in range(n):
     values.append(randint(1, 100))
->>>>>>> 4aa1e8914e722f1526d0938285b8c8d7c863ad43
 
-print(values)
-quickSort(values, 0, n - 1)
-print(values)
+values1 = list(values)
+
+# print(values)
+start = time()
+Ch12.quicksort.quickSort(values, 0, n - 1)
+end = time()
+#print(values)
+print(end-start)
+print()
+start = time()
+Ch12.P12_8.quickSort(values1, 0, n - 1)
+end = time()
+#print(values1)
+print(end-start)

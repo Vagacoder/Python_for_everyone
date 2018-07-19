@@ -1,13 +1,6 @@
-##
-#  The sort function sorts a list, using the quicksort algorithm.
-#
+## P12.9
 
-## Sorts a portion of a list, using quicksort.
-#  @param values the list to sort
-#  @param start the first index of the portion to be sorted
-#  @param to the last index of the portion to be sorted
-#
-
+# Bentley and McIlroy improvement on quick sort
 
 def quickSort(values, start, to):
     if start >= to:
@@ -17,12 +10,8 @@ def quickSort(values, start, to):
     quickSort(values, start, p)
     quickSort(values, p + 1, to)
 
-## Partitions a portion of a list.
-#  @param values the list to partition
-#  @param start the first index of the portion to be partitioned
-#  @param to the last index of the portion to be partitioned
-#  @return the last index of the first partition
-#
+
+# suggestion on partition from "<= | >=" to "< | = | >"
 
 def partition(values, start, to):
     pivot = values[start]
@@ -42,4 +31,3 @@ def partition(values, start, to):
             values[i] = values[j]
             values[j] = temp
     return j
-
