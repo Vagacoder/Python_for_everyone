@@ -7,6 +7,7 @@ class Country:
         self._area = area
 
 
+    # note: the __lt__ return boolean, not integer like in Java
     def __lt__(self, other):
         return self._area < other.getArea()
 
