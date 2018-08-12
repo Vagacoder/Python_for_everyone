@@ -25,3 +25,11 @@ for line in inputFile:
             counts[word] +=1
 
 print(counts)
+
+l = list()
+for k, v in list(counts.items()):
+    l.append((v, k))
+
+l.sort(reverse=True)
+for k, v in l[:10]:
+    print(k, v)

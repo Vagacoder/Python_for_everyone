@@ -49,12 +49,28 @@ print(domain)
 
 # dictionary method items() return a list of tuples.
 # each tuple is a pair of key-value
-d = {'a':10, 'b':1, 'c':22}
+d = {'b':1, 'a':10, 'e':4, 'c':22, 'd':3 }
 print(type(d.items()))
 t = list(d.items())
 print(t)
 t.sort()
 print(t)
 
+# traversal keys and values in dictionary
+# element in list(d.items() is a tuple
+# first loop using a tuple to traversal tuples in list
+for (k, v) in list(d.items()):
+    print(k, v)
+    print(v, k)  # the order of tuple doesnt matter
 
+# second loop using one var to traversal tuples in list
+for i in list(d.items()):
+    print(i)
 
+# value-key in dictionary can be sorted
+l = list()
+for k, v in list(d.items()):
+    l.append((v, k))
+print(l)
+l.sort()
+print(l)
