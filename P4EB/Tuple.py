@@ -74,3 +74,26 @@ for k, v in list(d.items()):
 print(l)
 l.sort()
 print(l)
+
+# using tuple as key in dictionary
+compD = dict()
+compD['Jack','Slate'] = 1200
+compD[2, 5] = 1300
+compD[3] = 1400
+compD['Washington', 'DC', 'USA'] = 1500
+print(compD)
+print(compD[2, 5])
+for k in compD:
+    print(k, compD[k])
+
+# tuple is immutable, it has no methods like sort() or reverse()
+# but 
+a = (2, 4, 3, 1, 6)
+print(a)
+print(sorted(a))
+print(a)
+
+
+
+
+
