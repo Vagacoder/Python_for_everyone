@@ -4,7 +4,7 @@
 
 from random import randint
 
-from Ch12.binarysearch import binarySearch
+from binarysearch import binarySearch
 
 
 # Construct a random sorted list
